@@ -1,718 +1,1480 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<title>Propuesta Integral – Cabañas El Diucón | RUWEN</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --g:#2D4A2E;--g2:#3D6B40;--lake:#1B3A4B;--stone:#4A3F36;
-  --gold:#B89A5A;--gold2:#D4B472;--cream:#F4EFE6;--dark:#1A1A1A;
-  --white:#FFFFFF;
-}
-body{font-family:'Inter',sans-serif;background:#111}
-.slide{
-  width:210mm;height:297mm;position:relative;overflow:hidden;
-  margin:0 auto 20px;
-}
-@media print{
-  body{background:#fff;margin:0}
-  .slide{margin:0;page-break-after:always;break-after:page}
-  @page{size:A4 portrait;margin:0}
-}
-@media print {
-  * {
-    -webkit-print-color-adjust: exact !important;
-    color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-}
-@media screen{.slide{box-shadow:0 8px 40px rgba(0,0,0,.5)}}
+  <meta charset="UTF-8">
+  <title>Propuesta Integral – Cabañas El Diucón | RUWEN</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
 
-/* ── FOOTER COMPARTIDO ── */
-.sl-footer{
-  position:absolute;bottom:0;left:0;right:0;
-  padding:10px 26px;display:flex;justify-content:space-between;align-items:center;
-}
-.sl-footer span{font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.sl-footer img{height:20px;object-fit:contain}
-.sl-footer .duo{display:flex;gap:10px;align-items:center}
-.sl-footer .duo img:first-child{filter:none}
+    :root {
+      --g: #2D4A2E;
+      --g2: #3D6B40;
+      --lake: #1B3A4B;
+      --stone: #4A3F36;
+      --gold: #B89A5A;
+      --gold2: #D4B472;
+      --cream: #F4EFE6;
+      --dark: #1A1A1A;
+      --white: #FFFFFF;
+    }
 
-/* ══════════════════════════════════
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #111
+    }
+
+    .slide {
+      width: 210mm;
+      height: 297mm;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 20px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        margin: 0
+      }
+
+      .slide {
+        margin: 0;
+        page-break-after: always;
+        break-after: page
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 0
+      }
+    }
+
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+
+    @media screen {
+      .slide {
+        box-shadow: 0 8px 40px rgba(0, 0, 0, .5)
+      }
+    }
+
+    /* ── FOOTER COMPARTIDO ── */
+    .sl-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sl-footer span {
+      font-size: 7.5px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .4)
+    }
+
+    .sl-footer img {
+      height: 20px;
+      object-fit: contain
+    }
+
+    .sl-footer .duo {
+      display: flex;
+      gap: 10px;
+      align-items: center
+    }
+
+    .sl-footer .duo img:first-child {
+      filter: none
+    }
+
+    /* ══════════════════════════════════
    SLIDE 1 – PORTADA
 ══════════════════════════════════ */
-.s1{background:#0D2030}
-.s1-bg{
-  position:absolute;inset:0;
-  background:url('FOTO CABAÑAS DIUCON 1.jpg') center/cover no-repeat;
-  filter:brightness(.38);
-}
-.s1-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(180deg,
-    rgba(13,32,48,.2) 0%,
-    rgba(45,74,46,.55) 45%,
-    rgba(13,20,10,.92) 100%);
-}
-.s1-top{
-  position:absolute;top:0;left:0;right:0;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:20px 28px;
-  background:rgba(0,0,0,.28);
-  backdrop-filter:blur(6px);
-}
-.s1-top img{height:65px;object-fit:contain}
-.s1-top .lr{filter:none}
-.s1-bottom{
-  position:absolute;bottom:52px;left:0;right:0;
-  padding:0 44px;text-align:center;
-}
-.s1-tag{
-  display:inline-block;
-  border:1px solid var(--gold);color:var(--gold);
-  font-size:8.5px;letter-spacing:3px;text-transform:uppercase;
-  padding:5px 18px;border-radius:20px;margin-bottom:22px;
-  background:rgba(184,154,90,.12);
-}
-.s1-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:20px;font-weight:400;color:rgba(255,255,255,.88);
-  letter-spacing:.5px;line-height:1.4;margin-bottom:6px;
-}
-.s1-name{
-  font-family:'Cormorant Garamond',serif;
-  font-size:46px;font-weight:700;color:var(--gold2);
-  font-style:italic;line-height:1.1;margin-bottom:26px;
-}
-.s1-div{width:60px;height:2px;background:var(--gold);margin:0 auto 26px}
-.s1-meta{display:flex;justify-content:center;gap:50px}
-.s1-meta-item .lbl{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
-.s1-meta-item .val{font-size:11px;font-weight:500;color:rgba(255,255,255,.85)}
-.s1-footer{background:rgba(0,0,0,.4)}
+    .s1 {
+      background: #0D2030
+    }
 
-/* ══════════════════════════════════
+    .s1-bg {
+      position: absolute;
+      inset: 0;
+      background: url('FOTO CABAÑAS DIUCON 1.jpg') center/cover no-repeat;
+      filter: brightness(.38);
+    }
+
+    .s1-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+          rgba(13, 32, 48, .2) 0%,
+          rgba(45, 74, 46, .55) 45%,
+          rgba(13, 20, 10, .92) 100%);
+    }
+
+    .s1-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 28px;
+      background: rgba(0, 0, 0, .28);
+      backdrop-filter: blur(6px);
+    }
+
+    .s1-top img {
+      height: 65px;
+      object-fit: contain
+    }
+
+    .s1-top .lr {
+      filter: none
+    }
+
+    .s1-bottom {
+      position: absolute;
+      bottom: 52px;
+      left: 0;
+      right: 0;
+      padding: 0 44px;
+      text-align: center;
+    }
+
+    .s1-tag {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 8.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 5px 18px;
+      border-radius: 20px;
+      margin-bottom: 22px;
+      background: rgba(184, 154, 90, .12);
+    }
+
+    .s1-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, .88);
+      letter-spacing: .5px;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .s1-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 46px;
+      font-weight: 700;
+      color: var(--gold2);
+      font-style: italic;
+      line-height: 1.1;
+      margin-bottom: 26px;
+    }
+
+    .s1-div {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 26px
+    }
+
+    .s1-meta {
+      display: flex;
+      justify-content: center;
+      gap: 50px
+    }
+
+    .s1-meta-item .lbl {
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 5px
+    }
+
+    .s1-meta-item .val {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, .85)
+    }
+
+    .s1-footer {
+      background: rgba(0, 0, 0, .4)
+    }
+
+    /* ══════════════════════════════════
    SLIDE 2 – RESUMEN EJECUTIVO
 ══════════════════════════════════ */
-.s2{background:var(--cream)}
-.s2-head{
-  background:linear-gradient(135deg,var(--g) 0%,var(--lake) 100%);
-  padding:22px 30px;display:flex;justify-content:space-between;align-items:center;
-}
-.s2-head h2{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:#fff}
-.s2-head p{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:3px}
-.s2-hl{display:flex;gap:14px;align-items:center}
-.s2-hl img{height:30px;object-fit:contain}
-.s2-hl .ld{filter:none}
-.s2-hl .lr{filter:none}
-.s2-body{padding:30px 36px 80px}
-.s2-ghost{
-  font-family:'Cormorant Garamond',serif;
-  font-size:80px;font-weight:700;color:rgba(45,74,46,.07);
-  line-height:1;margin-bottom:-24px;user-select:none;
-}
-.s2-sec-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:22px;font-weight:700;color:var(--g);
-  border-left:4px solid var(--gold);padding-left:14px;margin-bottom:22px;
-}
-.s2-text{font-size:12px;line-height:1.9;color:#2A2A2A;margin-bottom:28px}
-.s2-box{
-  background:linear-gradient(135deg,var(--g),var(--lake));
-  border-radius:14px;padding:26px 30px;
-}
-.s2-box-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:16px;font-weight:600;color:var(--gold2);
-  letter-spacing:.5px;margin-bottom:14px;
-  border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:10px;
-}
-.s2-box p{font-size:11px;line-height:1.85;color:rgba(255,255,255,.88);font-weight:300}
-.s2-box strong{color:var(--gold2);font-weight:600}
+    .s2 {
+      background: var(--cream)
+    }
 
-.s2-footer-bar{background:var(--g)}
+    .s2-head {
+      background: linear-gradient(135deg, var(--g) 0%, var(--lake) 100%);
+      padding: 22px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-/* ══════════════════════════════════
+    .s2-head h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .s2-head p {
+      font-size: 8.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .6);
+      margin-top: 3px
+    }
+
+    .s2-hl {
+      display: flex;
+      gap: 14px;
+      align-items: center
+    }
+
+    .s2-hl img {
+      height: 30px;
+      object-fit: contain
+    }
+
+    .s2-hl .ld {
+      filter: none
+    }
+
+    .s2-hl .lr {
+      filter: none
+    }
+
+    .s2-body {
+      padding: 30px 36px 80px
+    }
+
+    .s2-ghost {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px;
+      font-weight: 700;
+      color: rgba(45, 74, 46, .07);
+      line-height: 1;
+      margin-bottom: -24px;
+      user-select: none;
+    }
+
+    .s2-sec-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--g);
+      border-left: 4px solid var(--gold);
+      padding-left: 14px;
+      margin-bottom: 22px;
+    }
+
+    .s2-text {
+      font-size: 12px;
+      line-height: 1.9;
+      color: #2A2A2A;
+      margin-bottom: 28px
+    }
+
+    .s2-box {
+      background: linear-gradient(135deg, var(--g), var(--lake));
+      border-radius: 14px;
+      padding: 26px 30px;
+    }
+
+    .s2-box-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--gold2);
+      letter-spacing: .5px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, .15);
+      padding-bottom: 10px;
+    }
+
+    .s2-box p {
+      font-size: 11px;
+      line-height: 1.85;
+      color: rgba(255, 255, 255, .88);
+      font-weight: 300
+    }
+
+    .s2-box strong {
+      color: var(--gold2);
+      font-weight: 600
+    }
+
+    .s2-footer-bar {
+      background: var(--g)
+    }
+
+    /* ══════════════════════════════════
    SLIDE 3 – GESTIÓN OPERATIVA
 ══════════════════════════════════ */
-.s3{background:#F7F4EF}
-.s3-head{
-  background:linear-gradient(135deg,var(--stone) 0%,#1E1810 100%);
-  padding:20px 28px;display:flex;justify-content:space-between;align-items:center;
-}
-.s3-head-txt h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff}
-.s3-head-txt p{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:3px}
-.s3-hl{display:flex;gap:12px;align-items:center}
-.s3-hl img{height:28px;object-fit:contain}
-.s3-hl .lr{filter:none}
-.s3-body{padding:18px 26px 80px}
-.s3-label{
-  display:inline-block;background:var(--stone);color:#fff;
-  font-size:8px;letter-spacing:2px;text-transform:uppercase;
-  padding:4px 14px;border-radius:20px;margin-bottom:16px;
-}
-.s3-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.s3-item{
-  background:#fff;border-radius:10px;padding:12px 14px;
-  border-left:3px solid var(--gold);
-  box-shadow:0 2px 10px rgba(0,0,0,.06);
-  display:flex;gap:11px;align-items:flex-start;
-}
-.s3-ico{
-  width:36px;height:36px;flex-shrink:0;border-radius:8px;
-  background:linear-gradient(135deg,var(--g),var(--lake));
-  display:flex;align-items:center;justify-content:center;
-}
-.s3-ico svg{width:18px;height:18px;fill:#fff}
-.s3-ico-stone{background:linear-gradient(135deg,var(--stone),#6A5C50)}
-.s3-itxt h4{font-size:10.5px;font-weight:600;color:var(--dark);margin-bottom:4px}
-.s3-itxt p{font-size:9.5px;color:#555;line-height:1.5}
-.s3-hon{
-  background:linear-gradient(135deg,var(--g),var(--stone));
-  border-radius:12px;padding:16px 22px;
-  display:flex;justify-content:space-between;align-items:center;
-  margin-bottom:10px;
-}
-.s3-hon h4{font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;font-weight:600}
-.s3-hon .price{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--gold2)}
-.s3-note{font-size:8.5px;color:#888;line-height:1.55;font-style:italic;padding:0 2px}
-.s3-footer-bar{background:var(--stone)}
+    .s3 {
+      background: #F7F4EF
+    }
 
-/* ══════════════════════════════════
+    .s3-head {
+      background: linear-gradient(135deg, var(--stone) 0%, #1E1810 100%);
+      padding: 20px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .s3-head-txt h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .s3-head-txt p {
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .55);
+      margin-top: 3px
+    }
+
+    .s3-hl {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .s3-hl img {
+      height: 28px;
+      object-fit: contain
+    }
+
+    .s3-hl .lr {
+      filter: none
+    }
+
+    .s3-body {
+      padding: 18px 26px 80px
+    }
+
+    .s3-label {
+      display: inline-block;
+      background: var(--stone);
+      color: #fff;
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .s3-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px
+    }
+
+    .s3-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--gold);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+    }
+
+    .s3-ico {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--g), var(--lake));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .s3-ico svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff
+    }
+
+    .s3-ico-stone {
+      background: linear-gradient(135deg, var(--stone), #6A5C50)
+    }
+
+    .s3-itxt h4 {
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 4px
+    }
+
+    .s3-itxt p {
+      font-size: 9.5px;
+      color: #555;
+      line-height: 1.5
+    }
+
+    .s3-hon {
+      background: linear-gradient(135deg, var(--g), var(--stone));
+      border-radius: 12px;
+      padding: 16px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .s3-hon h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 600
+    }
+
+    .s3-hon .price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold2)
+    }
+
+    .s3-note {
+      font-size: 8.5px;
+      color: #888;
+      line-height: 1.55;
+      font-style: italic;
+      padding: 0 2px
+    }
+
+    .s3-footer-bar {
+      background: var(--stone)
+    }
+
+    /* ══════════════════════════════════
    SLIDE 4 – CONTENIDOS & REDES
 ══════════════════════════════════ */
-.s4{background:var(--cream)}
-.s4-head{
-  background:linear-gradient(135deg,#173A22 0%,var(--g) 100%);
-  padding:20px 28px;display:flex;justify-content:space-between;align-items:center;
-}
-.s4-head h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff}
-.s4-head p{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:3px}
-.s4-hl{display:flex;gap:12px;align-items:center}
-.s4-hl img{height:28px;object-fit:contain}
-.s4-hl .lr{filter:none}
-.s4-body{padding:18px 26px 80px}
-.s4-intro{font-size:10px;color:#444;line-height:1.7;margin-bottom:16px;font-style:italic}
-.s4-sec h3{
-  font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:var(--g);
-  border-bottom:2px solid var(--gold);padding-bottom:5px;margin-bottom:10px;
-}
-.s4-sec p{font-size:10px;color:#333;line-height:1.7;margin-bottom:14px}
-.s4-pack{
-  background:#fff;border-radius:12px;padding:16px 20px;margin-bottom:14px;
-  box-shadow:0 3px 15px rgba(0,0,0,.07);border-top:3px solid var(--g);
-}
-.s4-pack h3{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:var(--g);margin-bottom:12px}
-.s4-pack-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:10px}
-.s4-pcard{
-  text-align:center;background:linear-gradient(135deg,var(--g),var(--lake));
-  border-radius:10px;padding:13px 8px;
-}
-.s4-pcard .big{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--gold2);display:block}
-.s4-pcard .lbl{font-size:8.5px;color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.8px}
-.s4-pack-note{font-size:9px;color:#666;font-style:italic;line-height:1.5}
-.s4-com{
-  background:rgba(45,74,46,.08);border-radius:10px;padding:13px 17px;
-  border-left:3px solid var(--g);margin-bottom:14px;
-}
-.s4-com h4{font-size:11px;font-weight:600;color:var(--g);margin-bottom:5px}
-.s4-com p{font-size:9.5px;color:#444;line-height:1.6}
-.s4-pbox{
-  background:linear-gradient(135deg,var(--gold),#8A6A2A);
-  border-radius:12px;padding:14px 22px;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.s4-pbox h4{font-family:'Cormorant Garamond',serif;font-size:17px;color:#fff}
-.s4-pbox .price{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#fff}
-.s4-pbox .price span{font-size:13px}
-.s4-footer-bar{background:var(--g)}
+    .s4 {
+      background: var(--cream)
+    }
 
-/* ══════════════════════════════════
+    .s4-head {
+      background: linear-gradient(135deg, #173A22 0%, var(--g) 100%);
+      padding: 20px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .s4-head h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .s4-head p {
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .55);
+      margin-top: 3px
+    }
+
+    .s4-hl {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .s4-hl img {
+      height: 28px;
+      object-fit: contain
+    }
+
+    .s4-hl .lr {
+      filter: none
+    }
+
+    .s4-body {
+      padding: 18px 26px 80px
+    }
+
+    .s4-intro {
+      font-size: 10px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-style: italic
+    }
+
+    .s4-sec h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--g);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    .s4-sec p {
+      font-size: 10px;
+      color: #333;
+      line-height: 1.7;
+      margin-bottom: 14px
+    }
+
+    .s4-pack {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, .07);
+      border-top: 3px solid var(--g);
+    }
+
+    .s4-pack h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--g);
+      margin-bottom: 12px
+    }
+
+    .s4-pack-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      margin-bottom: 10px
+    }
+
+    .s4-pcard {
+      text-align: center;
+      background: linear-gradient(135deg, var(--g), var(--lake));
+      border-radius: 10px;
+      padding: 13px 8px;
+    }
+
+    .s4-pcard .big {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--gold2);
+      display: block
+    }
+
+    .s4-pcard .lbl {
+      font-size: 8.5px;
+      color: rgba(255, 255, 255, .85);
+      text-transform: uppercase;
+      letter-spacing: .8px
+    }
+
+    .s4-pack-note {
+      font-size: 9px;
+      color: #666;
+      font-style: italic;
+      line-height: 1.5
+    }
+
+    .s4-com {
+      background: rgba(45, 74, 46, .08);
+      border-radius: 10px;
+      padding: 13px 17px;
+      border-left: 3px solid var(--g);
+      margin-bottom: 14px;
+    }
+
+    .s4-com h4 {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--g);
+      margin-bottom: 5px
+    }
+
+    .s4-com p {
+      font-size: 9.5px;
+      color: #444;
+      line-height: 1.6
+    }
+
+    .s4-pbox {
+      background: linear-gradient(135deg, var(--gold), #8A6A2A);
+      border-radius: 12px;
+      padding: 14px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .s4-pbox h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      color: #fff
+    }
+
+    .s4-pbox .price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .s4-pbox .price span {
+      font-size: 13px
+    }
+
+    .s4-footer-bar {
+      background: var(--g)
+    }
+
+    /* ══════════════════════════════════
    SLIDE 5 – PERFORMANCE MARKETING
 ══════════════════════════════════ */
-.s5{background:#EEF3F7}
-.s5-head{
-  background:linear-gradient(135deg,var(--lake) 0%,#0D2030 100%);
-  padding:20px 28px;display:flex;justify-content:space-between;align-items:center;
-}
-.s5-head h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff}
-.s5-head p{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:3px}
-.s5-hl{display:flex;gap:12px;align-items:center}
-.s5-hl img{height:28px;object-fit:contain}
-.s5-hl .lr{filter:none}
-.s5-body{padding:18px 26px 80px}
-.s5-intro{font-size:10px;color:#444;line-height:1.7;margin-bottom:16px;font-style:italic}
-.s5-card{
-  background:#fff;border-radius:12px;padding:16px 20px;
-  box-shadow:0 3px 15px rgba(0,0,0,.07);margin-bottom:12px;
-}
-.s5-card-hd{display:flex;gap:14px;align-items:center;margin-bottom:12px}
-.s5-ico{width:44px;height:44px;flex-shrink:0;border-radius:10px;display:flex;align-items:center;justify-content:center}
-.s5-ico.meta{background:linear-gradient(135deg,#1877F2,#0057CC)}
-.s5-ico.google{background:#fff;border:2px solid #e0e0e0}
-.s5-ico svg{width:26px;height:26px}
-.s5-card-title h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--dark)}
-.s5-card-title p{font-size:8.5px;color:#999;text-transform:uppercase;letter-spacing:1px}
-.s5-card p{font-size:10px;color:#444;line-height:1.7}
-.s5-prices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.s5-pitem{
-  text-align:center;background:linear-gradient(135deg,var(--lake),var(--g));
-  border-radius:10px;padding:14px 10px;
-}
-.s5-pitem .amount{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--gold2);display:block}
-.s5-pitem .lbl{font-size:8px;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.8px}
-.s5-note{
-  background:rgba(27,58,75,.08);border-radius:10px;padding:13px 17px;
-  border-left:3px solid var(--lake);margin-bottom:12px;
-}
-.s5-note p{font-size:9.5px;color:#444;line-height:1.6}
-.s5-note strong{color:var(--lake)}
-.s5-footer-bar{background:var(--lake)}
+    .s5 {
+      background: #EEF3F7
+    }
 
-/* ══════════════════════════════════
+    .s5-head {
+      background: linear-gradient(135deg, var(--lake) 0%, #0D2030 100%);
+      padding: 20px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .s5-head h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .s5-head p {
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .55);
+      margin-top: 3px
+    }
+
+    .s5-hl {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .s5-hl img {
+      height: 28px;
+      object-fit: contain
+    }
+
+    .s5-hl .lr {
+      filter: none
+    }
+
+    .s5-body {
+      padding: 18px 26px 80px
+    }
+
+    .s5-intro {
+      font-size: 10px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-style: italic
+    }
+
+    .s5-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, .07);
+      margin-bottom: 12px;
+    }
+
+    .s5-card-hd {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 12px
+    }
+
+    .s5-ico {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .s5-ico.meta {
+      background: linear-gradient(135deg, #1877F2, #0057CC)
+    }
+
+    .s5-ico.google {
+      background: #fff;
+      border: 2px solid #e0e0e0
+    }
+
+    .s5-ico svg {
+      width: 26px;
+      height: 26px
+    }
+
+    .s5-card-title h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--dark)
+    }
+
+    .s5-card-title p {
+      font-size: 8.5px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px
+    }
+
+    .s5-card p {
+      font-size: 10px;
+      color: #444;
+      line-height: 1.7
+    }
+
+    .s5-prices {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px
+    }
+
+    .s5-pitem {
+      text-align: center;
+      background: linear-gradient(135deg, var(--lake), var(--g));
+      border-radius: 10px;
+      padding: 14px 10px;
+    }
+
+    .s5-pitem .amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--gold2);
+      display: block
+    }
+
+    .s5-pitem .lbl {
+      font-size: 8px;
+      color: rgba(255, 255, 255, .8);
+      text-transform: uppercase;
+      letter-spacing: .8px
+    }
+
+    .s5-note {
+      background: rgba(27, 58, 75, .08);
+      border-radius: 10px;
+      padding: 13px 17px;
+      border-left: 3px solid var(--lake);
+      margin-bottom: 12px;
+    }
+
+    .s5-note p {
+      font-size: 9.5px;
+      color: #444;
+      line-height: 1.6
+    }
+
+    .s5-note strong {
+      color: var(--lake)
+    }
+
+    .s5-footer-bar {
+      background: var(--lake)
+    }
+
+    /* ══════════════════════════════════
    SLIDE 6 – DESARROLLO WEB & CIERRE
 ══════════════════════════════════ */
-.s6{background:var(--cream)}
-.s6-head{
-  background:linear-gradient(135deg,var(--g),var(--lake));
-  padding:20px 28px;display:flex;justify-content:space-between;align-items:center;
-}
-.s6-head h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff}
-.s6-head p{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:3px}
-.s6-hl{display:flex;gap:12px;align-items:center}
-.s6-hl img{height:28px;object-fit:contain}
-.s6-hl .lr{filter:none}
-.s6-body{padding:16px 26px 70px}
-.s6-intro{font-size:10px;color:#444;line-height:1.7;margin-bottom:14px;font-style:italic}
-.s6-wp-row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:14px}
-.s6-wcard{
-  background:linear-gradient(135deg,var(--g),var(--lake));
-  border-radius:9px;padding:11px 10px;text-align:center;
-}
-.s6-wcard svg{width:22px;height:22px;fill:var(--gold2);margin-bottom:6px}
-.s6-wcard p{font-size:9px;color:#fff;font-weight:500}
-.s6-feats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
-.s6-feat{background:#fff;border-radius:10px;padding:12px 15px;border-left:3px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.s6-feat h4{font-size:10px;font-weight:600;color:var(--dark);margin-bottom:4px}
-.s6-feat p{font-size:9px;color:#555;line-height:1.5}
-.s6-inv{
-  background:linear-gradient(135deg,var(--stone),#140F0A);
-  border-radius:14px;padding:16px 22px;margin-bottom:12px;
-}
-.s6-inv h3{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold2);font-weight:700;margin-bottom:12px}
-.s6-inv-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.s6-iv{text-align:center}
-.s6-iv .amt{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--gold2);display:block}
-.s6-iv .lbl{font-size:8px;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.7px}
-.s6-iv .sub{font-size:7.5px;color:rgba(255,255,255,.45);margin-top:2px}
-.s6-cierreBox{
-  background:linear-gradient(135deg,var(--g),var(--lake));
-  border-radius:12px;padding:16px 22px;text-align:center;margin-bottom:10px;
-}
-.s6-cierreBox .big{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:var(--gold2)}
-.s6-cierreBox p{font-size:10px;color:rgba(255,255,255,.85);line-height:1.7}
-.s6-nfooter{font-size:8px;color:#999;line-height:1.6;font-style:italic}
-.s6-footer-bar{background:var(--g)}
-</style>
+    .s6 {
+      background: var(--cream)
+    }
+
+    .s6-head {
+      background: linear-gradient(135deg, var(--g), var(--lake));
+      padding: 20px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .s6-head h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .s6-head p {
+      font-size: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .55);
+      margin-top: 3px
+    }
+
+    .s6-hl {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .s6-hl img {
+      height: 28px;
+      object-fit: contain
+    }
+
+    .s6-hl .lr {
+      filter: none
+    }
+
+    .s6-body {
+      padding: 16px 26px 70px
+    }
+
+    .s6-intro {
+      font-size: 10px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 14px;
+      font-style: italic
+    }
+
+    .s6-wp-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      margin-bottom: 14px
+    }
+
+    .s6-wcard {
+      background: linear-gradient(135deg, var(--g), var(--lake));
+      border-radius: 9px;
+      padding: 11px 10px;
+      text-align: center;
+    }
+
+    .s6-wcard svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--gold2);
+      margin-bottom: 6px
+    }
+
+    .s6-wcard p {
+      font-size: 9px;
+      color: #fff;
+      font-weight: 500
+    }
+
+    .s6-feats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-bottom: 14px
+    }
+
+    .s6-feat {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 15px;
+      border-left: 3px solid var(--gold);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .06)
+    }
+
+    .s6-feat h4 {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 4px
+    }
+
+    .s6-feat p {
+      font-size: 9px;
+      color: #555;
+      line-height: 1.5
+    }
+
+    .s6-inv {
+      background: linear-gradient(135deg, var(--stone), #140F0A);
+      border-radius: 14px;
+      padding: 16px 22px;
+      margin-bottom: 12px;
+    }
+
+    .s6-inv h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--gold2);
+      font-weight: 700;
+      margin-bottom: 12px
+    }
+
+    .s6-inv-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px
+    }
+
+    .s6-iv {
+      text-align: center
+    }
+
+    .s6-iv .amt {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold2);
+      display: block
+    }
+
+    .s6-iv .lbl {
+      font-size: 8px;
+      color: rgba(255, 255, 255, .7);
+      text-transform: uppercase;
+      letter-spacing: .7px
+    }
+
+    .s6-iv .sub {
+      font-size: 7.5px;
+      color: rgba(255, 255, 255, .45);
+      margin-top: 2px
+    }
+
+    .s6-cierreBox {
+      background: linear-gradient(135deg, var(--g), var(--lake));
+      border-radius: 12px;
+      padding: 16px 22px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .s6-cierreBox .big {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--gold2)
+    }
+
+    .s6-cierreBox p {
+      font-size: 10px;
+      color: rgba(255, 255, 255, .85);
+      line-height: 1.7
+    }
+
+    .s6-nfooter {
+      font-size: 8px;
+      color: #999;
+      line-height: 1.6;
+      font-style: italic
+    }
+
+    .s6-footer-bar {
+      background: var(--g)
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      SLIDE 1 – PORTADA
 ══════════════════════════════════ -->
-<div class="slide s1">
-  <div class="s1-bg"></div>
-  <div class="s1-overlay"></div>
-  <div class="s1-top">
-    <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-    <img src="LOGO EL DIUCON.png" alt="El Diucón">
-  </div>
-  <div class="s1-bottom">
-    <div class="s1-tag">PROPUESTA COMERCIAL · 2026</div>
-    <div class="s1-title">Propuesta de Gestión Integral y Estrategia Digital</div>
-    <div class="s1-name">Cabañas El Diucón</div>
-    <div class="s1-div"></div>
-    <div class="s1-meta">
-      <div class="s1-meta-item">
-        <div class="lbl">Fecha</div>
-        <div class="val">1 de Abril, 2026</div>
-      </div>
-      <div class="s1-meta-item">
-        <div class="lbl">Prestador</div>
-        <div class="val">RUWEN – Gestión &amp; Desarrollo Digital</div>
-      </div>
-      <div class="s1-meta-item">
-        <div class="lbl">Modalidad</div>
-        <div class="val">Pack Integral</div>
-      </div>
-    </div>
-  </div>
-  <div class="sl-footer s1-footer">
-    <span>Confidencial · RUWEN 2026</span>
-    <div class="duo">
-      <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+  <div class="slide s1">
+    <div class="s1-bg"></div>
+    <div class="s1-overlay"></div>
+    <div class="s1-top">
+      <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
       <img src="LOGO EL DIUCON.png" alt="El Diucón">
     </div>
+    <div class="s1-bottom">
+      <div class="s1-tag">PROPUESTA COMERCIAL · 2026</div>
+      <div class="s1-title">Propuesta de Gestión Integral y Estrategia Digital</div>
+      <div class="s1-name">Cabañas El Diucón</div>
+      <div class="s1-div"></div>
+      <div class="s1-meta">
+        <div class="s1-meta-item">
+          <div class="lbl">Fecha</div>
+          <div class="val">1 de Abril, 2026</div>
+        </div>
+        <div class="s1-meta-item">
+          <div class="lbl">Prestador</div>
+          <div class="val">RUWEN – Gestión &amp; Desarrollo Digital</div>
+        </div>
+        <div class="s1-meta-item">
+          <div class="lbl">Modalidad</div>
+          <div class="val">Pack Integral</div>
+        </div>
+      </div>
+    </div>
+    <div class="sl-footer s1-footer">
+      <span>RUWEN 2026</span>
+      <div class="duo">
+        <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      SLIDE 2 – RESUMEN EJECUTIVO
 ══════════════════════════════════ -->
-<div class="slide s2">
-  <div class="s2-head">
-    <div>
-      <h2>Resumen Ejecutivo</h2>
-      <p>Propuesta Integral · Cabañas El Diucón</p>
+  <div class="slide s2">
+    <div class="s2-head">
+      <div>
+        <h2>Resumen Ejecutivo</h2>
+        <p>Propuesta Integral · Cabañas El Diucón</p>
+      </div>
+      <div class="s2-hl">
+        <img class="ld" src="LOGO EL DIUCON.png" alt="El Diucón">
+        <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+      </div>
     </div>
-    <div class="s2-hl">
-      <img class="ld" src="LOGO EL DIUCON.png" alt="El Diucón">
-      <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-    </div>
-  </div>
-  <div class="s2-body">
-    <div class="s2-ghost">01</div>
-    <div class="s2-sec-title">Objetivo de la Propuesta</div>
-    <p class="s2-text">
-      El objetivo de esta propuesta es que las cabañas funcionen de manera autónoma y eficiente, 
-      garantizando la mejor experiencia al huésped en un entorno "off-grid" y maximizando la 
-      rentabilidad del propietario sin que este reciba llamados por problemas operativos.
-    </p>
-    <div class="s2-box">
-      <div class="s2-box-title">Módulos Incluidos en esta Propuesta</div>
-      <p>
-        <strong>1. Gestión Operativa "Llave en Mano"</strong> — Presencia física y logística en Villa Meliquina: reservas, check-in/out, inducción off-grid, mantenimiento preventivo e insumos.<br><br>
-        <strong>2. Producción de Contenidos y Marketing Digital</strong> — Identidad de marca y captación directa: audiovisual, redes sociales y comunidad.<br><br>
-        <strong>3. Performance Marketing (Meta Ads)</strong> — Gestión profesional de anuncios pagos para atraer tráfico calificado.<br><br>
-        <strong>4. Desarrollo Web y Ecosistema de Reservas</strong> — Sitio propio en WordPress con motor de reservas integrado (Lodgy) y SEO local.
+    <div class="s2-body">
+      <div class="s2-ghost">01</div>
+      <div class="s2-sec-title">Objetivo de la Propuesta</div>
+      <p class="s2-text">
+        El objetivo de esta propuesta es que las cabañas funcionen de manera autónoma y eficiente,
+        garantizando la mejor experiencia al huésped en un entorno "off-grid" y maximizando la
+        rentabilidad del propietario sin que este reciba llamados por problemas operativos.
       </p>
+      <div class="s2-box">
+        <div class="s2-box-title">Módulos Incluidos en esta Propuesta</div>
+        <p>
+          <strong>1. Gestión Operativa "Llave en Mano"</strong> — Presencia física y logística en Villa Meliquina:
+          reservas, check-in/out, inducción off-grid, mantenimiento preventivo e insumos.<br><br>
+          <strong>2. Producción de Contenidos y Marketing Digital</strong> — Identidad de marca y captación directa:
+          audiovisual, redes sociales y comunidad.<br><br>
+          <strong>3. Performance Marketing (Meta Ads)</strong> — Gestión profesional de anuncios pagos para atraer
+          tráfico calificado.<br><br>
+          <strong>4. Desarrollo Web y Ecosistema de Reservas</strong> — Sitio propio en WordPress con motor de reservas
+          integrado (Lodgy) y SEO local.
+        </p>
+      </div>
+    </div>
+
+    <div class="sl-footer s2-footer-bar">
+      <span>Resumen Ejecutivo · RUWEN 2026</span>
+      <div class="duo">
+        <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+      </div>
     </div>
   </div>
 
-  <div class="sl-footer s2-footer-bar">
-    <span>Resumen Ejecutivo · RUWEN 2026</span>
-    <div class="duo">
-      <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-      <img src="LOGO EL DIUCON.png" alt="El Diucón">
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      SLIDE 3 – GESTIÓN OPERATIVA
 ══════════════════════════════════ -->
-<div class="slide s3">
-  <div class="s3-head">
-    <div class="s3-head-txt">
-      <h2>Gestión Operativa "Llave en Mano"</h2>
-      <p>Módulo 1 · Presencia física y logística en Villa Meliquina</p>
+  <div class="slide s3">
+    <div class="s3-head">
+      <div class="s3-head-txt">
+        <h2>Gestión Operativa "Llave en Mano"</h2>
+        <p>Módulo 1 · Presencia física y logística en Villa Meliquina</p>
+      </div>
+      <div class="s3-hl">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+        <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+      </div>
     </div>
-    <div class="s3-hl">
-      <img src="LOGO EL DIUCON.png" alt="El Diucón">
-      <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+    <div class="s3-body">
+      <span class="s3-label">Este módulo cubre la presencia física y la logística en Villa Meliquina</span>
+      <div class="s3-grid">
+        <!-- Gestión de Reservas -->
+        <div class="s3-item">
+          <div class="s3-ico">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V8h14v13zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z" />
+            </svg>
+          </div>
+          <div class="s3-itxt">
+            <h4>Gestión de Reservas</h4>
+            <p>Manejo total de calendarios en Airbnb, Booking y atención 24 hs.</p>
+          </div>
+        </div>
+        <!-- Check-in / Check-out -->
+        <div class="s3-item">
+          <div class="s3-ico">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
+            </svg>
+          </div>
+          <div class="s3-itxt">
+            <h4>Operación Local (Check-in / Check-out)</h4>
+            <p>Recepción y despedida presencial de huéspedes en Villa Meliquina.</p>
+          </div>
+        </div>
+        <!-- Inducción Off-Grid -->
+        <div class="s3-item">
+          <div class="s3-ico s3-ico-stone">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 2v11h3v9l7-12h-4l4-8z" />
+            </svg>
+          </div>
+          <div class="s3-itxt">
+            <h4>Inducción Off-Grid</h4>
+            <p>Explicación técnica obligatoria sobre el uso de paneles solares, baterías y cuidado del agua.</p>
+          </div>
+        </div>
+        <!-- Mantenimiento -->
+        <div class="s3-item">
+          <div class="s3-ico s3-ico-stone">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
+            </svg>
+          </div>
+          <div class="s3-itxt">
+            <h4>Mantenimiento Preventivo</h4>
+            <p>Chequeo de carga de baterías, presión de agua y niveles de gas en cada rotación.</p>
+          </div>
+        </div>
+        <!-- Insumos -->
+        <div class="s3-item" style="grid-column:1/-1">
+          <div class="s3-ico">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+            </svg>
+          </div>
+          <div class="s3-itxt">
+            <h4>Insumos y Logística</h4>
+            <p>Gestión de stock (higiene, cortesía) y coordinación de leña y reposición de carga de gas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="s3-hon">
+        <div>
+          <h4>Honorarios de Gestión Operativa</h4>
+          <p style="font-size:9.5px;color:rgba(255,255,255,.7);margin-top:4px">Por reserva confirmada · Sobre ingreso
+            neto</p>
+        </div>
+        <div class="price">20%</div>
+      </div>
+      <p class="s3-note">*No incluye costos de lavandería y limpieza; los valores ya fueron detallados en la propuesta
+        anterior del Hosting Local.</p>
+    </div>
+    <div class="sl-footer s3-footer-bar">
+      <span>Módulo 1 · Gestión Operativa · RUWEN 2026</span>
+      <div class="duo">
+        <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+      </div>
     </div>
   </div>
-  <div class="s3-body">
-    <span class="s3-label">Este módulo cubre la presencia física y la logística en Villa Meliquina</span>
-    <div class="s3-grid">
-      <!-- Gestión de Reservas -->
-      <div class="s3-item">
-        <div class="s3-ico">
-          <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V8h14v13zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
-        </div>
-        <div class="s3-itxt">
-          <h4>Gestión de Reservas</h4>
-          <p>Manejo total de calendarios en Airbnb, Booking y atención 24 hs.</p>
-        </div>
-      </div>
-      <!-- Check-in / Check-out -->
-      <div class="s3-item">
-        <div class="s3-ico">
-          <svg viewBox="0 0 24 24"><path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
-        </div>
-        <div class="s3-itxt">
-          <h4>Operación Local (Check-in / Check-out)</h4>
-          <p>Recepción y despedida presencial de huéspedes en Villa Meliquina.</p>
-        </div>
-      </div>
-      <!-- Inducción Off-Grid -->
-      <div class="s3-item">
-        <div class="s3-ico s3-ico-stone">
-          <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
-        </div>
-        <div class="s3-itxt">
-          <h4>Inducción Off-Grid</h4>
-          <p>Explicación técnica obligatoria sobre el uso de paneles solares, baterías y cuidado del agua.</p>
-        </div>
-      </div>
-      <!-- Mantenimiento -->
-      <div class="s3-item">
-        <div class="s3-ico s3-ico-stone">
-          <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
-        </div>
-        <div class="s3-itxt">
-          <h4>Mantenimiento Preventivo</h4>
-          <p>Chequeo de carga de baterías, presión de agua y niveles de gas en cada rotación.</p>
-        </div>
-      </div>
-      <!-- Insumos -->
-      <div class="s3-item" style="grid-column:1/-1">
-        <div class="s3-ico">
-          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-        </div>
-        <div class="s3-itxt">
-          <h4>Insumos y Logística</h4>
-          <p>Gestión de stock (higiene, cortesía) y coordinación de leña y reposición de carga de gas.</p>
-        </div>
-      </div>
-    </div>
-    <div class="s3-hon">
-      <div>
-        <h4>Honorarios de Gestión Operativa</h4>
-        <p style="font-size:9.5px;color:rgba(255,255,255,.7);margin-top:4px">Por reserva confirmada · Sobre ingreso neto</p>
-      </div>
-      <div class="price">20%</div>
-    </div>
-    <p class="s3-note">*No incluye costos de lavandería y limpieza; los valores ya fueron detallados en la propuesta anterior del Hosting Local.</p>
-  </div>
-  <div class="sl-footer s3-footer-bar">
-    <span>Módulo 1 · Gestión Operativa · RUWEN 2026</span>
-    <div class="duo">
-      <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-      <img src="LOGO EL DIUCON.png" alt="El Diucón">
-    </div>
-  </div>
-</div>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      SLIDE 4 – CONTENIDOS & REDES
 ══════════════════════════════════ -->
-<div class="slide s4">
-  <div class="s4-head">
-    <div>
-      <h2>Producción de Contenidos y Marketing Digital</h2>
-      <p>Módulo 2 · Identidad de marca y captación directa</p>
-    </div>
-    <div class="s4-hl">
-      <img src="LOGO EL DIUCON.png" alt="El Diucón">
-      <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-    </div>
-  </div>
-  <div class="s4-body">
-    <p class="s4-intro">Orientado a generar identidad de marca y captación directa a través de la web para evitar comisiones de terceros.</p>
-
-    <div class="s4-sec">
-      <h3>Producción Audiovisual In-Situ</h3>
-      <p>Captura de fotos y videos por parte de RUWEN para mostrar la realidad y el encanto de la Villa y sus cabañas.</p>
-    </div>
-
-    <div class="s4-pack">
-      <h3>Pack de Contenidos — Creación y edición mensual</h3>
-      <div class="s4-pack-row">
-        <div class="s4-pcard">
-          <span class="big">3</span>
-          <span class="lbl">Reels Mensuales</span>
-        </div>
-        <div class="s4-pcard">
-          <span class="big">1</span>
-          <span class="lbl">Publicación Foto en Feed</span>
-        </div>
-        <div class="s4-pcard">
-          <span class="big">12</span>
-          <span class="lbl">Historias Mensuales</span>
-        </div>
-      </div>
-      <p class="s4-pack-note">Alta calidad para Instagram / Facebook, repartidas a lo largo del mes (1 publicación reel/foto por semana + 3 historias).</p>
-    </div>
-
-    <div class="s4-com">
-      <h4>Gestión de Comunidad</h4>
-      <p>Manejo profesional de las cuentas de Instagram y WhatsApp Business de las cabañas. Se creará un catálogo para el Business.</p>
-    </div>
-
-    <div class="s4-pbox">
+  <div class="slide s4">
+    <div class="s4-head">
       <div>
-        <h4>Honorarios de Producción y Gestión</h4>
-        <p style="font-size:9px;color:rgba(255,255,255,.7);margin-top:3px">Por mes · Incluye producción, edición y gestión de comunidad</p>
+        <h2>Producción de Contenidos y Marketing Digital</h2>
+        <p>Módulo 2 · Identidad de marca y captación directa</p>
       </div>
-      <div class="price">$150 <span>USD / mes</span></div>
+      <div class="s4-hl">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+        <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+      </div>
     </div>
-  </div>
-  <div class="sl-footer s4-footer-bar">
-    <span>Módulo 2 · Contenidos &amp; Redes · RUWEN 2026</span>
-    <div class="duo">
-      <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-      <img src="LOGO EL DIUCON.png" alt="El Diucón">
-    </div>
-  </div>
-</div>
+    <div class="s4-body">
+      <p class="s4-intro">Orientado a generar identidad de marca y captación directa a través de la web para evitar
+        comisiones de terceros.</p>
 
-<!-- ══════════════════════════════════
+      <div class="s4-sec">
+        <h3>Producción Audiovisual In-Situ</h3>
+        <p>Captura de fotos y videos por parte de RUWEN para mostrar la realidad y el encanto de la Villa y sus cabañas.
+        </p>
+      </div>
+
+      <div class="s4-pack">
+        <h3>Pack de Contenidos — Creación y edición mensual</h3>
+        <div class="s4-pack-row">
+          <div class="s4-pcard">
+            <span class="big">3</span>
+            <span class="lbl">Reels Mensuales</span>
+          </div>
+          <div class="s4-pcard">
+            <span class="big">1</span>
+            <span class="lbl">Publicación Foto en Feed</span>
+          </div>
+          <div class="s4-pcard">
+            <span class="big">12</span>
+            <span class="lbl">Historias Mensuales</span>
+          </div>
+        </div>
+        <p class="s4-pack-note">Alta calidad para Instagram / Facebook, repartidas a lo largo del mes (1 publicación
+          reel/foto por semana + 3 historias).</p>
+      </div>
+
+      <div class="s4-com">
+        <h4>Gestión de Comunidad</h4>
+        <p>Manejo profesional de las cuentas de Instagram y WhatsApp Business de las cabañas. Se creará un catálogo para
+          el Business.</p>
+      </div>
+
+      <div class="s4-pbox">
+        <div>
+          <h4>Honorarios de Producción y Gestión</h4>
+          <p style="font-size:9px;color:rgba(255,255,255,.7);margin-top:3px">Por mes · Incluye producción, edición y
+            gestión de comunidad</p>
+        </div>
+        <div class="price">$250 <span>USD / mes</span></div>
+      </div>
+    </div>
+    <div class="sl-footer s4-footer-bar">
+      <span>Módulo 2 · Contenidos &amp; Redes · RUWEN 2026</span>
+      <div class="duo">
+        <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
      SLIDE 5 – PERFORMANCE MARKETING
 ══════════════════════════════════ -->
-<div class="slide s5">
-  <div class="s5-head">
-    <div>
-      <h2>Performance Marketing (Ads)</h2>
-      <p>Módulo 3 · Anuncios pagos y tráfico calificado</p>
-    </div>
-    <div class="s5-hl">
-      <img src="LOGO EL DIUCON.png" alt="El Diucón">
-      <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-    </div>
-  </div>
-  <div class="s5-body">
-    <p class="s5-intro">Gestión profesional de anuncios pagos para atraer tráfico calificado hacia las cabañas.</p>
-
-    <!-- META ADS -->
-    <div class="s5-card">
-      <div class="s5-card-hd">
-        <div class="s5-ico meta">
-          <svg viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/></svg>
-        </div>
-        <div class="s5-card-title">
-          <h3>Meta Ads (Instagram &amp; Facebook)</h3>
-          <p>Gestión Profesional de Campañas Pagas</p>
-        </div>
+  <div class="slide s5">
+    <div class="s5-head">
+      <div>
+        <h2>Performance Marketing (Ads)</h2>
+        <p>Módulo 3 · Anuncios pagos y tráfico calificado</p>
       </div>
-      <p><strong style="color:var(--dark)">Configuración de Campañas:</strong> Creación de públicos segmentados por intereses (trekking, naturaleza, viajes de lujo).</p>
-      <p style="margin-top:8px"><strong style="color:var(--dark)">Optimización de Pauta:</strong> Seguimiento diario de métricas para maximizar el alcance de los videos producidos.</p>
-      <div class="s5-prices">
-        <div class="s5-pitem">
-          <span class="amount">$50–$100</span>
-          <span class="lbl">USD / mes · Inversión en plataforma<br>(a cargo del cliente)</span>
-        </div>
-        <div class="s5-pitem">
-          <span class="amount">$50</span>
-          <span class="lbl">USD / mes · Honorarios de<br>Gestión de Ads · RUWEN</span>
-        </div>
+      <div class="s5-hl">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+        <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
       </div>
     </div>
+    <div class="s5-body">
+      <p class="s5-intro">Gestión profesional de anuncios pagos para atraer tráfico calificado hacia las cabañas.</p>
 
-    <!-- GOOGLE ADS -->
-    <div class="s5-card">
-      <div class="s5-card-hd">
-        <div class="s5-ico google">
-          <svg viewBox="0 0 24 24" width="26" height="26">
-            <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" fill="#4285F4"/>
-          </svg>
+      <!-- META ADS -->
+      <div class="s5-card">
+        <div class="s5-card-hd">
+          <div class="s5-ico meta">
+            <svg viewBox="0 0 24 24" fill="white">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+            </svg>
+          </div>
+          <div class="s5-card-title">
+            <h3>Meta Ads (Instagram &amp; Facebook)</h3>
+            <p>Gestión Profesional de Campañas Pagas</p>
+          </div>
         </div>
-        <div class="s5-card-title">
-          <h3>Google Ads — Sitio Web Propio</h3>
-          <p>Recomendación y condiciones</p>
+        <p><strong style="color:var(--dark)">Configuración de Campañas:</strong> Creación de públicos segmentados por
+          intereses (trekking, naturaleza, viajes de lujo).</p>
+        <p style="margin-top:8px"><strong style="color:var(--dark)">Optimización de Pauta:</strong> Seguimiento diario
+          de métricas para maximizar el alcance de los videos producidos.</p>
+        <div class="s5-prices">
+          <div class="s5-pitem">
+            <span class="amount">$50–$100</span>
+            <span class="lbl">USD / mes · Inversión en plataforma<br>(a cargo del cliente)</span>
+          </div>
+          <div class="s5-pitem">
+            <span class="amount">$50</span>
+            <span class="lbl">USD / mes · Honorarios de<br>Gestión de Ads · RUWEN</span>
+          </div>
         </div>
       </div>
-      <p>Para la publicidad de anuncios en Google Ads de la Página Web se cobrarán los mismos honorarios de la gestión de anuncios de Meta. <strong style="color:var(--lake)">Recomendamos primero el desarrollo de una página profesional propia para Cabañas El Diucón.</strong></p>
-    </div>
 
-    <div class="s5-note">
-      <p><strong>Nota importante:</strong> El presupuesto de inversión directa en la plataforma (Meta) es sugerido de entre <strong>$50 y $100 USD mensuales</strong>, adicionales a cargo del cliente. Los honorarios de gestión de RUWEN son independientes de dicho presupuesto.</p>
+      <!-- GOOGLE ADS -->
+      <div class="s5-card">
+        <div class="s5-card-hd">
+          <div class="s5-ico google">
+            <svg viewBox="0 0 24 24" width="26" height="26">
+              <path
+                d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"
+                fill="#4285F4" />
+            </svg>
+          </div>
+          <div class="s5-card-title">
+            <h3>Google Ads — Sitio Web Propio</h3>
+            <p>Recomendación y condiciones</p>
+          </div>
+        </div>
+        <p>Para la publicidad de anuncios en Google Ads de la Página Web se cobrarán los mismos honorarios de la gestión
+          de anuncios de Meta. <strong style="color:var(--lake)">Recomendamos primero el desarrollo de una página
+            profesional propia para Cabañas El Diucón.</strong></p>
+      </div>
+
+      <div class="s5-note">
+        <p><strong>Nota importante:</strong> El presupuesto de inversión directa en la plataforma (Meta) es sugerido de
+          entre <strong>$50 y $100 USD mensuales</strong>, adicionales a cargo del cliente. Los honorarios de gestión de
+          RUWEN son independientes de dicho presupuesto.</p>
+      </div>
+    </div>
+    <div class="sl-footer s5-footer-bar">
+      <span>Módulo 3 · Performance Marketing · RUWEN 2026</span>
+      <div class="duo">
+        <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+      </div>
     </div>
   </div>
-  <div class="sl-footer s5-footer-bar">
-    <span>Módulo 3 · Performance Marketing · RUWEN 2026</span>
-    <div class="duo">
-      <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-      <img src="LOGO EL DIUCON.png" alt="El Diucón">
-    </div>
-  </div>
-</div>
 
-<!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════
      SLIDE 6 – DESARROLLO WEB & CIERRE
 ══════════════════════════════════ -->
-<div class="slide s6">
-  <div class="s6-head">
-    <div>
-      <h2>Desarrollo Web y Ecosistema de Reservas</h2>
-      <p>Módulo 4 · Migración a plataforma propia con SEO y motor de reservas</p>
+  <div class="slide s6">
+    <div class="s6-head">
+      <div>
+        <h2>Desarrollo Web y Ecosistema de Reservas</h2>
+        <p>Módulo 4 · Migración a plataforma propia con SEO y motor de reservas</p>
+      </div>
+      <div class="s6-hl">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+        <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+      </div>
     </div>
-    <div class="s6-hl">
-      <img src="LOGO EL DIUCON.png" alt="El Diucón">
-      <img class="lr" src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-    </div>
-  </div>
-  <div class="s6-body">
-    <p class="s6-intro">Migración a una plataforma propia con mayor capacidad de conversión y SEO. Sitio Web Profesional en WordPress.</p>
+    <div class="s6-body">
+      <p class="s6-intro">Migración a una plataforma propia con mayor capacidad de conversión y SEO. Sitio Web
+        Profesional en WordPress.</p>
 
-    <div class="s6-wp-row">
-      <div class="s6-wcard">
-        <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
-        <p>Home</p>
-      </div>
-      <div class="s6-wcard">
-        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-        <p>Quiénes Somos</p>
-      </div>
-      <div class="s6-wcard">
-        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-        <p>Cabañas</p>
-      </div>
-      <div class="s6-wcard">
-        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-        <p>Blog</p>
-      </div>
-      <div class="s6-wcard">
-        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-        <p>Cómo Llegar</p>
-      </div>
-      <div class="s6-wcard">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        <p>Contacto</p>
-      </div>
-    </div>
-
-    <div class="s6-feats">
-      <div class="s6-feat">
-        <h4>Integración de PMS — Lodgy</h4>
-        <p>Sincronización del motor de reservas para mantener el calendario unificado y evitar overbooking.</p>
-      </div>
-      <div class="s6-feat">
-        <h4>Optimización SEO</h4>
-        <p>Configuración para posicionamiento orgánico en búsquedas locales de Google.</p>
-      </div>
-      <div class="s6-feat">
-        <h4>Mantenimiento Mensual</h4>
-        <p>Incluye 1 artículo de blog mensual, backups, seguridad y actualizaciones.</p>
-      </div>
-      <div class="s6-feat">
-        <h4>Tiempo de Entrega</h4>
-        <p>45 días hábiles desde la confirmación del proyecto.</p>
-      </div>
-    </div>
-
-    <div class="s6-inv">
-      <h3>Inversión Especial — Pack Integral</h3>
-      <div class="s6-inv-row">
-        <div class="s6-iv">
-          <span class="amt" style="text-decoration:line-through;opacity:.6">$700 USD</span>
-          <span class="lbl">Precio de Lista</span>
-          <div class="sub">Desarrollo web</div>
+      <div class="s6-wp-row">
+        <div class="s6-wcard">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
+          </svg>
+          <p>Home</p>
         </div>
-        <div class="s6-iv">
-          <span class="amt" style="color:#7CFC7C;font-size:28px">$600 USD</span>
-          <span class="lbl">✦ Valor Promocional</span>
-          <div class="sub">+1 servicio RUWEN · 50% inicio / 50% entrega</div>
+        <div class="s6-wcard">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+          </svg>
+          <p>Quiénes Somos</p>
         </div>
-        <div class="s6-iv">
-          <span class="amt">$35 USD</span>
-          <span class="lbl">Mantenimiento / mes</span>
-          <div class="sub">A mes vencido desde entrega</div>
+        <div class="s6-wcard">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          <p>Cabañas</p>
+        </div>
+        <div class="s6-wcard">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+          </svg>
+          <p>Blog</p>
+        </div>
+        <div class="s6-wcard">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          <p>Cómo Llegar</p>
+        </div>
+        <div class="s6-wcard">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+          <p>Contacto</p>
         </div>
       </div>
-    </div>
 
-    <p class="s6-nfooter">*No incluye gastos de hosting web. Recomendamos Hostinger (rendimiento, costos y tiempo en línea). RUWEN cuenta con un descuento adicional del 10% en el plan que elijas. El dominio ya se encuentra registrado; solo requiere renovación anual.</p>
-  </div>
-  <div class="sl-footer s6-footer-bar">
-    <span>Módulo 4 · Desarrollo Web &amp; Cierre · RUWEN 2026</span>
-    <div class="duo">
-      <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
-      <img src="LOGO EL DIUCON.png" alt="El Diucón">
+      <div class="s6-feats">
+        <div class="s6-feat">
+          <h4>Integración de PMS — Lodgy</h4>
+          <p>Sincronización del motor de reservas para mantener el calendario unificado y evitar overbooking.</p>
+        </div>
+        <div class="s6-feat">
+          <h4>Optimización SEO</h4>
+          <p>Configuración para posicionamiento orgánico en búsquedas locales de Google.</p>
+        </div>
+        <div class="s6-feat">
+          <h4>Mantenimiento Mensual</h4>
+          <p>Incluye 1 artículo de blog mensual, backups, seguridad y actualizaciones.</p>
+        </div>
+        <div class="s6-feat">
+          <h4>Tiempo de Entrega</h4>
+          <p>45 días hábiles desde la confirmación del proyecto.</p>
+        </div>
+      </div>
+
+      <div class="s6-inv">
+        <h3>Inversión Especial — Pack Integral</h3>
+        <div class="s6-inv-row">
+          <div class="s6-iv">
+            <span class="amt" style="text-decoration:line-through;opacity:.6">$700 USD</span>
+            <span class="lbl">Precio de Lista</span>
+            <div class="sub">Desarrollo web</div>
+          </div>
+          <div class="s6-iv">
+            <span class="amt" style="color:#7CFC7C;font-size:28px">$600 USD</span>
+            <span class="lbl">✦ Valor Promocional</span>
+            <div class="sub">+1 servicio RUWEN · 50% inicio / 50% entrega</div>
+          </div>
+          <div class="s6-iv">
+            <span class="amt">$35 USD</span>
+            <span class="lbl">Mantenimiento / mes</span>
+            <div class="sub">A mes vencido desde entrega</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="s6-nfooter">*No incluye gastos de hosting web. Recomendamos Hostinger (rendimiento, costos y tiempo en
+        línea). RUWEN cuenta con un descuento adicional del 10% en el plan que elijas. El dominio ya se encuentra
+        registrado; solo requiere renovación anual.</p>
+    </div>
+    <div class="sl-footer s6-footer-bar">
+      <span>Módulo 4 · Desarrollo Web &amp; Cierre · RUWEN 2026</span>
+      <div class="duo">
+        <img src="LOGO RUWEN para contrastes oscuros sin fondo.png" alt="RUWEN">
+        <img src="LOGO EL DIUCON.png" alt="El Diucón">
+      </div>
     </div>
   </div>
-</div>
 
 </body>
+
 </html>
